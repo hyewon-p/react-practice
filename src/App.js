@@ -30,7 +30,8 @@ function App() {
             <label htmlFor="money">How many coins can I get with: </label>
             <input name="money" value={BTC} onChange={onChange}></input>
           </div>
-          <select onChange={handleSelect} value={selected}>
+          <label htmlFor="yourCoin">Select your coin </label>
+          <select name="yourCoin" onChange={handleSelect} value={selected}>
             {coins.map((coin) => (
               <option>
                 {coin.name}({coin.symbol}): {coin.quotes.USD.price} USD
