@@ -33,7 +33,7 @@ function App() {
           <label htmlFor="yourCoin">Select your coin </label>
           <select name="yourCoin" onChange={handleSelect} value={selected}>
             {coins.map((coin) => (
-              <option>
+              <option key={coin.id}>
                 {coin.name}({coin.symbol}): {coin.quotes.USD.price} USD
               </option>
             ))}
